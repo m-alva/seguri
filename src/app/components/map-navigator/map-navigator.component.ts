@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 declare let L;
 
@@ -8,6 +8,10 @@ declare let L;
   styleUrls: ['./map-navigator.component.scss']
 })
 export class MapNavigatorComponent implements OnInit {
+  
+  @Input('subzones') subzones;
+
+  @Input('cais') cais;
 
   constructor() { }
 
@@ -41,21 +45,12 @@ ngOnInit() {
         ]
     ];
 
-    
-    L.circle([4.643824, -74.073037], {radius: 200,color:'#ff0000'}).addTo(map);
-    L.circle([4.632898, -74.078227], {radius: 300,color:'#ff0000'}).addTo(map);
-    L.circle([4.634556, -74.068378], {radius: 100,color:'#ffff33'}).addTo(map);
-    L.circle([4.633914, -74.089371], {radius: 200,color:'#ffff33'}).addTo(map);
+    if (this.subzones) {
+      this.subzones.forEach(zone => {
+        L.circle([zone.longitude, zone.latitude], {radius: zone.radius, color: zone.color}).addTo(map);
+      });
+    }
 
-    // var latlngs =[
-    //     [ // first polygon
-    //         [[37, -109.05],[41, -109.03],[41, -102.05],[37, -102.04]], // outer ring
-    //         [[37.29, -108.58],[40.71, -108.58],[40.71, -102.50],[37.29, -102.50]], // hole
-    //     ],
-    //     [ // second polygon
-    //         [[41, -111.03],[45, -111.04],[45, -104.05],[41, -104.05]]
-    //       ]
-    // ];
     
     var polygon = L.polygon(latlngs, {color: '#005AFFA6'}).addTo(map);
     // zoom the map to the polygon
