@@ -1,8 +1,10 @@
 :host {
-    display: block;
-    app-map-navigator {
-        margin-top: -1rem;
-        height: 110%;
-        width: 100%;
-    }
+  display: block;
+  app-map-navigator {
+    position: relative;
+    margin-top: -1rem;
+    height: 110%;
+    width: 100%;
+    z-index: 0;
+  }
 }
