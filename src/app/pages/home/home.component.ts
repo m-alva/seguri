@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareService } from '@src/app/services/share.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'seguri';
 
-  constructor() { }
+  constructor(
+    private share: ShareService,
+  ) {
+    this.share.title.next("");
+  }
+  
 
   ngOnInit() {
   }

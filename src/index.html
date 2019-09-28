@@ -2,13 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>seguri</title>
+  <title>SEGURI</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    splash-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(180deg, #F2CB05 0%, rgba(242, 203, 5, 0) 100%), #F27405;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: bold;
+      transition: opacity 0.5s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    app-root:empty + splash-screen {
+     opacity: 1;
+     pointer-events: all;
+    }
+    html {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <splash-screen>
+    seguri
+  </splash-screen>
 </body>
 </html>
