@@ -51,6 +51,16 @@ ngOnInit() {
       });
     }
 
+    var greenIcon = L.icon({
+      iconUrl: './assets/icons/cai.svg',
+      iconSize:     [38, 95], // size of the icon
+    });
+
+    if (this.cais) {
+      this.cais.forEach(cai => {
+        L.marker([cai.longitude, cai.latitude], {icon: greenIcon}).addTo(map).bindPopup(cai.message);
+      });
+    }
     
     var polygon = L.polygon(latlngs, {color: '#005AFFA6'}).addTo(map);
     // zoom the map to the polygon
