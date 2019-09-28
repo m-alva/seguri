@@ -1,5 +1,7 @@
 <header *ngIf="title | async" >{{title | async}}</header>
-<router-outlet></router-outlet>
+<div class="wrapper-container">
+    <router-outlet></router-outlet>
+</div>
 <footer>
     <div class="btn-icon">
         <a href="#" [routerLink]="['/home']" routerLinkActive="home" >

@@ -7,7 +7,8 @@ import { HomeComponent } from '@src/app/pages/home/home.component';
 import { CaiComponent } from '@src/app/pages/cai/cai.component';
 import { AlertsComponent } from '@src/app/pages/alerts/alerts.component';
 import { CommunityComponent } from '@src/app/pages/community/community.component';
-import { ShareService } from './services/share.service';
+import { ShareService } from '@src/app/services/share.service';
+import { MapNavigatorComponent } from '@src/app/components/map-navigator/map-navigator.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ShareService } from './services/share.service';
     CaiComponent,
     AlertsComponent,
     CommunityComponent,
+    MapNavigatorComponent,
   ],
   imports: [
     BrowserModule,
