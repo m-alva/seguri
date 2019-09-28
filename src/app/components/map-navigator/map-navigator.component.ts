@@ -13,6 +13,8 @@ export class MapNavigatorComponent implements OnInit {
 
   @Input('cais') cais;
 
+  @Input('enableLocalization') enableLocalization;
+
   constructor() { }
 
 ngOnInit() {
@@ -59,6 +61,22 @@ ngOnInit() {
     if (this.cais) {
       this.cais.forEach(cai => {
         L.marker([cai.longitude, cai.latitude], {icon: greenIcon}).addTo(map).bindPopup(cai.message);
+      });
+    }
+
+    if (this.enableLocalization) {
+      var groupIcon = L.icon({
+        iconUrl: './assets/icons/Group.svg',
+        iconSize:     [100, 100],
+      });
+      map.locate({setView: true, maxZoom: 16});
+      
+      map.on('locationfound', function(e) {    
+        var markerDrag = L.marker(e.latlng,{icon: groupIcon, draggable: true}).addTo(map)
+          .bindPopup("I'm here! I'm in Següri!!").openPopup();
+  
+          var draggable = new L.Draggable(markerDrag);
+          draggable.enable();
       });
     }
     
