@@ -11,7 +11,7 @@ export class AlertsComponent implements OnInit {
   constructor(
     private share: ShareService,
   ) {
-    this.share.title.next("Alertas")
+    this.share.title.next("Mis alertas")
   }
 
   ngOnInit() {

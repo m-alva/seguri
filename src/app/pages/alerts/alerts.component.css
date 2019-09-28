@@ -1,0 +1,31 @@
+.wrapper {
+    margin:1vh 6vw;
+    font-size:13px;
+}
+.sep {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+.redAlert {
+    display:grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    background-color: #FFE7E7;
+    color:#D10000;
+    padding: 5px;
+    border-radius:10px;
+    justify-items: center;
+    align-items: center;
+}
+.danger {
+    font-weight:bold;
+}
+.yellowAlert {
+    display:grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    background-color: rgba(242, 183, 5, 0.27);
+    color: #F28C03;
+    padding: 5px;
+    border-radius:10px;
+    justify-items: center;
+    align-items: center;
+}
