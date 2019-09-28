@@ -4,7 +4,7 @@ import { ShareService } from '@src/app/services/share.service';
 @Component({
   selector: 'app-cai',
   templateUrl: './cai.component.html',
-  styleUrls: ['./cai.component.css']
+  styleUrls: ['./cai.component.scss']
 })
 export class CaiComponent implements OnInit {
 
