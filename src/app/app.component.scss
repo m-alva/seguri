@@ -1,8 +1,9 @@
 :host {
     position: relative;
-    display: block;
-    height: 100vh;
+    display: flex;
     width: 100vw;
+    height: calc(100vh - 2.9rem);
+    flex-direction: column;
     header {
         position: relative;
         display: flex;
@@ -18,7 +19,12 @@
     }
     .wrapper-container {
         position: relative;
+        height: 100%;
         z-index: 0;
+        ::ng-deep router-outlet + * {
+            display: block;
+            height: 100%;
+        }
     }
     footer {
         position: fixed;
