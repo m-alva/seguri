@@ -8,6 +8,7 @@ import { CaiComponent } from '@src/app/pages/cai/cai.component';
 import { AlertsComponent } from '@src/app/pages/alerts/alerts.component';
 import { CommunityComponent } from '@src/app/pages/community/community.component';
 import { MapNavigatorComponent } from '@src/app/components/map-navigator/map-navigator.component';
+import { AlertButtonComponent } from '@src/app/alert-button/alert-button.component';
 
 // import { registerElement } from "nativescript-angular/element-registry";
 // registerElement("Mapbox", () => require("nativescript-mapbox").MapboxView);
@@ -27,6 +28,7 @@ import { MapNavigatorComponent } from '@src/app/components/map-navigator/map-nav
     AlertsComponent,
     CommunityComponent,
     MapNavigatorComponent,
+    AlertButtonComponent,
   ],
   imports: [
     NativeScriptModule,

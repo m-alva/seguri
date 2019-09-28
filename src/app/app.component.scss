@@ -1,66 +1,66 @@
 :host {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 2.9rem);
+  flex-direction: column;
+  header {
     position: relative;
     display: flex;
-    width: 100vw;
-    height: calc(100vh - 2.9rem);
-    flex-direction: column;
-    header {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        height: 3rem;
-        font-size: 0.7rem;
-        font-weight: bolder;
-        letter-spacing: 1.5px;
-        border: 1px solid rgba(0,0,0,0.08);
-        box-shadow: 0 0 1.4rem 0.2rem rgba(0,0,0,0.12);
-        background: white;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
-        z-index: 1;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 16px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 1.4rem 0.2rem rgba(0, 0, 0, 0.12);
+    background: white;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    z-index: 1;
+  }
+  .wrapper-container {
+    position: relative;
+    height: 100%;
+    z-index: 0;
+    ::ng-deep router-outlet + * {
+      display: block;
+      height: 100%;
     }
-    .wrapper-container {
-        position: relative;
-        height: 100%;
-        z-index: 0;
-        ::ng-deep router-outlet + * {
-            display: block;
-            height: 100%;
-        }
+  }
+  footer {
+    position: fixed;
+    background: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    a {
+      color: #666;
+      font-weight: bolder;
+      letter-spacing: 1px;
+      display: inline-flex;
+      height: 2rem;
+      width: 2rem;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.5rem;
+      transition: color 0.4s;
+      &.active {
+        color: #f28c03;
+      }
+      i {
+        font-size: 1rem;
+      }
     }
-    footer {
-        position: fixed;
-        background: white;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 3rem;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        z-index: 2;
-        a {
-            color: #666;
-            font-weight: bolder;
-            letter-spacing: 1px;
-            display: inline-flex;
-            height: 2rem;
-            width: 2rem;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            font-size: 0.5rem;
-            transition: color 0.4s;
-            &.active {
-                color: #F28C03;
-            }
-            i {
-                font-size: 1rem;
-            }
-        }
-    }
+  }
 }

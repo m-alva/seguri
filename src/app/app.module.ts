@@ -9,6 +9,7 @@ import { AlertsComponent } from '@src/app/pages/alerts/alerts.component';
 import { CommunityComponent } from '@src/app/pages/community/community.component';
 import { ShareService } from '@src/app/services/share.service';
 import { MapNavigatorComponent } from '@src/app/components/map-navigator/map-navigator.component';
+import { AlertButtonComponent } from '@src/app/components/alert-button/alert-button.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MapNavigatorComponent } from '@src/app/components/map-navigator/map-nav
     AlertsComponent,
     CommunityComponent,
     MapNavigatorComponent,
+    AlertButtonComponent,
   ],
   imports: [
     BrowserModule,
